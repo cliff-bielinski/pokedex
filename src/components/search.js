@@ -14,7 +14,7 @@ function Search(props) {
   const [open, setOpen] = useState(false);
 
   const getPokemon = () => {
-    fetch(`./sample-data/${props.query}.json`,
+    fetch(`https://pokemon-nw5v.onrender.com/pokemon/${props.query}`,
     {
       headers: {
         'Content-Type': 'application/json',
@@ -30,6 +30,7 @@ function Search(props) {
     })
     .catch(error => {
       console.error("Pokemon not found!");
+      console.error(error);
       props.setResult("error");
     });
   }

@@ -69,7 +69,7 @@ function Result(props) {
               <ListItemText
                 primary="Secondary Type"
                 secondary={props.result.types.length > 1 
-                  ? props.result.types.types[1].type.name
+                  ? props.result.types[1].type.name
                   : "none"
                 }
               />
